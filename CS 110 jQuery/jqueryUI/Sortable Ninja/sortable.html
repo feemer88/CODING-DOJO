@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>jQuery Assessment Ninja</title>
+	<meta charset="utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#images_list').sortable();
+		});
+	</script>
+	<style>
+		#wrapper{
+			width:310px;
+			margin:0 auto;
+		}
+		img{
+			display: block;
+			margin: 2px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>jQuery Sortable Ninja</h1>
+		<div id="images_list">
+			<img src="img/ninja0.png" alt="layer" />
+			<img src="img/ninja1.png" alt="layer" />
+			<img src="img/ninja2.png" alt="layer" />
+			<img src="img/ninja3.png" alt="layer" />
+			<img src="img/ninja4.png" alt="layer" />
+		</div>
+	</div>
+</body>
+</html>

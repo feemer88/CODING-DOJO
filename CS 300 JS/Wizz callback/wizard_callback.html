@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to Callbacks</title>
+    <script>
+      
+        var wizard = {
+            mana: 500,
+            spells: {
+                open_sesame: {
+                    name: "Open Sesame",
+                    mana_cost: 10
+                },
+                chain_lightning: {
+                    name: "Chain Lightning",
+                    mana_cost: 20
+                },
+                fireball: {
+                    name: "Fireball",
+                    mana_cost: 30
+                }
+            },
+            castSpell: function(spell, callback) {
+            
+                this.mana -= spell.mana_cost;
+           
+                callback(spell);
+            }
+        };
+
+
+        wizard.castSpell( wizard.spells.fireball, function(spell) {
+           
+            alert("The wizard casted a spell! The spell is " + spell.name);
+            alert("The wizard spent " + spell.mana_cost + " mana to cast it");
+            alert("The wizard has " + wizard.mana + " left");
+        });
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

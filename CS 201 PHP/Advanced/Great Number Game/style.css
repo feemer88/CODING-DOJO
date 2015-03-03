@@ -1,0 +1,48 @@
+#container{
+	width: 650px;
+	height: 700px;
+	margin: auto;
+}
+#top{
+	text-align: center;
+}
+#left.box, #right.box{
+	background-color: red;
+	text-align: center;
+}
+
+#middle1{
+	background-color: green;
+	color: white;
+	position: absolute;
+	left:430px;
+	top:195px;
+	text-align: center;
+}
+#middle1 input {
+
+}
+#hide{
+	display: none;
+}
+.box{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	vertical-align: top;
+	/*border: 1px solid black;*/
+}
+p {
+	margin-top: 80px;
+	color: white;
+	font-weight: 500;
+	display: inline-block;
+}
+input{
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+}
+form{
+	margin-top: 80px;
+}

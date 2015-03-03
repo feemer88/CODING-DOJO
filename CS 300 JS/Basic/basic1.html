@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic1</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+// part_one
+	function part_one(){
+		var x = [3,5, 'Dojo', 'rocks', {name: 'Jin', title: 'hello'}];
+
+		for(var i =0; i<x.length;i++){
+		console.log (x[i], typeof(x[i]));
+		}
+	}
+	console.log(part_one());
+
+//part_two
+	function part_one(){
+		var x = [3,5, 'Dojo', 'rocks', {name: 'Jin', title: 'hello'}];
+		x.push(100);
+		for(var i =0; i<x.length;i++){
+		console.log (x[i], typeof(x[i]));
+		}
+	}
+	console.log(part_one());
+
+//part_three
+	function part_one(){
+		var x = [3,5, 'Dojo', 'rocks', {name: 'Jin', title: 'hello'}];
+		x.push([100]);
+		for(var i =0; i<x.length;i++){
+		console.log (x[i], typeof(x[i]));
+		}
+	}
+	console.log(part_one());
+
+//part_four
+	
+	function add(sum){
+		for(var i = 1; i < 501; i++){
+			sum += i; 
+		}
+		return sum;
+	}
+	var sum = 0;
+	console.log(add(sum));
+
+//part_five  1. create a forloop that sums 1 to 1 mil. 2. timestap it before and after the lopp and find out how long it took!
+	var sum = 0;
+	// var start = new Date(getMilliseconds());
+	// var end = new Date(getMilliseconds());
+	// var miliseconds = new Date().getTime();
+	// var start = new Date().getMilliseconds();
+	function foo(sum){
+		// var start = new Date().getTime().getMilliseconds();
+		var start = window.performance.now();
+		for(var i = 1; i <= 1000000; i++){
+			sum += i;
+		}
+		// var end = new Date().getTime.getMilliseconds();
+		var end = window.performance.now();
+		var time = end - start;
+		return [sum, time];
+		// return sum
+		
+	}
+	console.log(foo(sum));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

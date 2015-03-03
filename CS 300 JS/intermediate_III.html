@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intermediate III</title>
+</head>
+<body>
+	<h5>Learning how to pass soemthing back to the callback function!</h5>
+	<script>
+	//does it need to be an annoymous function?
+	var mainFunction, callback;
+
+	function callback(number){
+		return console.log('my zipper!' + number);
+	}
+
+	function main(arg1, arg2, callback){
+		var number = Math.ceil(Math.random() * (arg1 - arg2) + arg2);
+		callback(number);
+	}
+	main(5, 15, function(num) {
+		console.log("callback called! " + number);
+	});
+	// callback(number);
+	
+
+
+
+	</script>
+</body>
+</html>

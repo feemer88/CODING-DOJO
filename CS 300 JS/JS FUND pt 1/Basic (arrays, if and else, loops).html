@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Basic I Assignment</title>
+	<script>
+		//declare an array, which containts combination of numbers, strings and functions.
+		x = [3,5,'Dojo', 'rocks', {name: 'Bear', title: 'Hi'}];
+
+		//loop through an array and echo/log each
+		for(item in x){
+			console.log(x[item]);
+		}
+
+		//add or push new item in the x array
+		x.push(100);
+		console.log(x);
+
+		//push a new array inside the x array variable and display it as log
+		x.push(["hello", "world"]);
+		console.log(x);
+
+		//for loop that sums all the numbers between 1 to 500
+		total = 0;
+		for(var i = 1; i <= 500; i++){
+			var total = i + total;
+		}
+		console.log(total);
+
+		//get the time difference in milliseconds before and after looping 1 million times.
+		var date = new Date();
+		var start = date.getTime();
+
+		sum = 0;
+		for(var i = 1; i <= 1000000; i++ ){
+			var sum = i + sum;
+		}
+
+		var date = new Date();
+		var end = date.getTime();
+
+		var timediff = end - start;
+		console.log("Time Difference in milliseconds: " + timediff);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

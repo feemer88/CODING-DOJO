@@ -1,0 +1,128 @@
+<script>
+	var person = {};
+	person = {
+		name: 'Jin',
+
+		distance_travelled: 0,
+
+		say_name: function() {
+			alert(this.name);
+		},
+
+		say_something: function(message) {
+			console.log(this.name + " says " + "'" + message + "'");
+		},
+
+		walk: function() {
+			alert(this.name + " is walking");
+			console.log(this.distance_travelled + 3);
+			// return {distance_travelled: distance_travelled += 3}
+		},
+
+		run: function() {
+			alert(this.name + " is running");
+			console.log(this.distance_travelled + 10);
+			// return {distance_travelled: distance_travelled + 10};
+		},
+
+		crawl: function() {
+			alert(this.name + " is crawling");
+			console.log(this.distance_travelled + 1);
+		},
+
+
+		x: function () {
+				return " & eatting icecream!!!";
+			},
+
+		y: function () {
+				return " & crying at home";
+			},
+
+		fly: function (x, y) {
+			function rand(min, max) {
+				  var offset = min;
+				  var range = (max - min) + 1;
+
+				  var randomNumber = Math.floor( Math.random() * range) + offset;
+				  return randomNumber;
+				};
+			
+
+			if(rand(0, 100) > 70)
+			{
+				alert(this.name + " is flying" + person.x());
+
+			}
+			else
+			{
+				alert(this.name + " falied to fly..." + person.y());
+			}
+
+		},
+
+		doSomething: function() {
+			// var array = [person.walks(), person.run(), person.crawl()];
+			function rand() {
+				var min = 1;
+				var max = 100;
+				var offset = min;
+				var range = (max - min) + 1;
+				var randomNumber = Math.floor( Math.random() * range) + offset;
+				return randomNumber;
+			}
+			// console.log(randomNumber());
+			if(rand(0, 100) < 33.3)
+			{
+				person.walk();
+			}
+			else if(rand(0, 100) < 66.6 || randomNumber > 33.3)
+			{
+				person.run();
+			}
+			else if(rand(0, 100))
+			{
+				person.crawl();
+			}
+		}
+//rand this array!
+
+
+
+	};//close the person object
+
+	// person.say_name();
+	// person.say_something('thank you');
+	// person.walk();
+	// person.run();
+	// person.doSomething();
+	person.fly();
+</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

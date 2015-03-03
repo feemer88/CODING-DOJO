@@ -1,0 +1,4 @@
+Less.js will not run if you dont have wamp/mamp installed. 
+
+For wamp, you need to put these files in your www folder in order for the .less file to be compiled by less.js
+While for mamp, you may need to put the files in htdocs folder

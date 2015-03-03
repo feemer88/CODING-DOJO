@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Library</title>
+</head>
+<body>
+	<script>
+	var jin = ( function() {
+		return {
+			
+			map: function(list, fn, num) {
+				if(list){
+					for(var i = 0; i < list.length; i++)
+					{
+						num = list[i];
+						list[i] = fn(num);
+					}	
+						return list;
+				}
+				else 
+				{
+					list = [];
+				}
+			},
+			
+			reduce: function(list, fn, memo, num) {
+				if(list == null)
+				{
+					return list = [];
+				}
+				else
+				{
+					
+					for(var i = 0; i < list.length; i++)
+					{
+
+						memo = fn(memo, list[i]);
+						// r
+						
+					}
+					return memo;
+
+				}
+			},
+
+			find: function(list, fn) {
+				if(list == null)
+				{
+					list = [];
+				}
+				else
+				{
+					for(var i=0, j=list.length; i<j; i++) 
+					{
+					 	if(fn(list[i]))
+					 	{
+					 		return(list[i]);
+					 	}
+					}
+
+				}
+			},
+			
+			filter: function(list, fn) {
+				if(list == null)
+				{
+					list = [];
+				}
+				else
+				{
+					for(var i=0, j=list.length; i<j; i++) 
+					{
+					 	if(fn(list[i]))
+					 	{
+					 		console.log(list[i]);
+					 	}
+					}
+
+				}
+			},
+
+					
+			reject: function (list, fn) {
+				if(list == null)
+				{
+					list = [];
+				}
+				else
+				{
+					var newArr = [];
+					for(var i = 0; i < list.length; i++)
+					{
+						if(fn(list[i]) === false)
+						{
+							newArr.push(list[i]);
+						}
+
+					}
+					return newArr;
+				}
+			}
+		}
+	})()
+
+	// var map = jin.map([1, 2, 3, 4, 5, 6], function(num){ return num * 3;}, 3); 
+	// console.log(map);
+	// var sum = jin.reduce([1, 2, 3, 4, 5, 6], function(memo, num){return memo + num;}, 3);
+	// console.log(sum);
+	// var even = jin.find([1, 2, 3, 4, 5, 6], function(num){return num % 2 == 0;});
+	// console.log(even);
+	// var even = jin.filter([1, 2, 3, 4, 5, 6], function(num){return num % 2 == 0;});
+	// console.log(even);
+	var odd = jin.reject([1, 2, 3, 4, 5, 6], function(num){return num % 2 == 0;})
+	console.log(odd);
+
+
+
+
+	</script>
+</body>
+</html>

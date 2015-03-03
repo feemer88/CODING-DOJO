@@ -1,0 +1,46 @@
+#wrapper {
+	margin:0 auto;
+	width:950px;
+}
+#accordion_wrapper {
+	float:left;
+	margin-left:20px;
+	height: 300px;
+	padding: 10px;
+	width: 400px;
+}
+#tab_wrapper {
+	float:left;
+	padding: 10px;
+	height: 300px;
+	width: 400px;
+}
+#accordion {
+	width:400px;
+	height:100px;
+}
+h3{
+	height:30px;
+}
+
+/*to reduce accordions header text size*/
+#accordion .ui-accordion-header{  
+	font-size: 12px;  			
+	height: 15px;
+}
+
+/*to reduce accordions header content*/
+#accordion .ui-accordion-content{  
+	font-size: 10px;   
+} 
+
+/*to reduce tabs header text size*/
+.ui-tabs .ui-tabs-nav li {
+	height:30px;
+	font-size:12px;
+}
+
+/*to reduce tabs content text size*/
+.ui-tabs-panel {
+	font-size:10px;
+}

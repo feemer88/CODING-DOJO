@@ -1,0 +1,79 @@
+<html>​
+​<head>​
+	<title>Intermediate III - Walk Game </title>​
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+​</head>​
+​<body>​
+​
+	<div id="character">​
+		<img id="ninja" src='img/right1.png'>​
+	</div>​
+	<div id="box"></div>​
+​
+	<script>
+	function gameLoop()
+	{
+		$('#character').css( { left: x, top: y });
+        
+	}
+	setInterval(gameLoop, 150);
+	var x=0, y=0;
+    var rc=0,lc=0,tc=0,dc=0;
+    var ri=["img/right1.png","img/right2.png"];
+    var li=["img/left1.png","img/left2.png"];
+    var ti=["img/top1.png","img/top2.png"];
+    var di=["img/down1.png","img/down2.png"];
+    
+	document.onkeydown = function(e)
+	{
+		if(e.keyCode == 37)
+		{
+            if(lc==0) {
+	            document.getElementById("ninja").src=li[1]; 
+	            lc++;
+            }
+            else if (lc==1) { 
+            	document.getElementById("ninja").src=li[0]; 
+            	lc--;
+            }
+			x = x-10;
+			if(x < 0){
+				x = 0;
+			}
+		}
+		else if(e.keyCode == 39)
+		{
+			x = x+10;
+            if(rc==0) { document.getElementById("ninja").src=ri[1]; rc++;}
+            else if (rc==1) { document.getElementById("ninja").src=ri[0]; rc--;}
+			if(x > 440){
+				x = 440;
+			}
+		}
+		if(e.keyCode == 38)
+		{
+            if(tc==0) { document.getElementById("ninja").src=ti[1]; tc++;}
+            else if (tc==1) { document.getElementById("ninja").src=ti[0]; tc--;}
+			y = y-10;
+			if(y < 0){
+				y = 0;
+			}
+		}
+		else if(e.keyCode == 40)
+		{
+            if(dc==0) { document.getElementById("ninja").src=di[1]; dc++;}
+            else if (dc==1) { document.getElementById("ninja").src=di[0]; dc--;}
+            y = y+10;
+			if(y > 410){
+				y = 410;
+			}
+		}
+		console.log(e.keyCode, x);
+		console.log(e.keyCode, y);
+	}
+	console.log(document);
+	</script>​
+​
+​</body>​
+​</html>

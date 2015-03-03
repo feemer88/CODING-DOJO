@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Advance Jquery</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css"/>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript">	
+		$(document).ready(function(){
+		
+			
+			$("form").submit(function(){
+			
+				
+				$("#contact").append("<div class='contact_info well'>"+
+					"<h1 class='name'>" + $("#first_name").val() + " " + $("#last_name").val() + 
+					"<br><small>Click for description</small></h1>"+
+					"<p class='description hidden'>" + $("#description").val() + "</p>"+
+					"</div>");
+				
+				return false;
+			});
+			
+			
+			$("#contact").on("click", ".contact_info", function(){
+				$(this).find('p.description').toggleClass("hidden");
+				$(this).find('h1.name').toggleClass("hidden");
+			});
+		})
+	</script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="span4">
+			<h3>Enter contact info</h3>
+			<form>
+				<label for="first_name" class="label">First Name</label>
+				<div class="controls-group">
+					<input type="test" id="first_name"/>
+				</div>
+				<label for="last_name" class="label">Last Name</label>
+				<div class="controls">
+					<input type="test" id="last_name"/>
+				</div>
+				<label for="description" class="label">description</label>
+				<div class="controls">
+					<textarea name="" id="description" cols="10" rows="3"></textarea>
+				</div>
+				<input type="submit" value="submit" class="btn btn-success"/>
+			</form>
+		</div>
+		<div id="contact" class="span4">
+			<h3 id="contact_header">Contact Information</h3>
+		</div>
+	</div>
+</body>
+</html>

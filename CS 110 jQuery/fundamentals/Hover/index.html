@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>basic page</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".fade").hover(
+					function(){
+						var temp = $(this).attr('src');
+						$(this).attr('src', $(this).attr('data-alt-src'));
+						$(this).attr('data-alt-src', temp);
+					}
+				);
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<img class="fade" src="images/front1.png" data-alt-src="images/back1.png">
+			<img class="fade" src="images/front2.png" data-alt-src="images/back2.png">
+			<img class="fade" src="images/front3.png" data-alt-src="images/back3.jpg">
+			<img class="fade" src="images/front4.png" data-alt-src="images/back4.png">
+		</div>
+	</body>
+</html>

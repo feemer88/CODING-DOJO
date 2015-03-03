@@ -1,0 +1,26 @@
+.contact_info{
+	border:black solid 1px;
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+	margin-left:5px;
+	min-height:80px;
+	min-width:150px;
+	height:auto;
+	padding:10px;
+	width:auto;
+}
+.contact_info p{
+	color:#FF0000;
+}
+
+.contact_description{
+	visibility: hidden;
+}
+
+.contact_description p{
+	color:#000000;
+}
+.container{
+	margin-left:200px;
+}

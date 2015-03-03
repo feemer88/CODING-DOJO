@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Basic 2 Assignment</title>
+	<script>
+	
+		person = {
+			name: "Oliver",
+			distance_travelled: 0,
+			say_name: function(){
+				alert(this.name);
+			},
+			say_something: function(x){
+				alert(this.name + " says " + x);
+			},
+		 	walk: function(){
+		 		person.distance_travelled += 3;
+		 		alert(person.name + " is walking " + person.distance_travelled); 
+		 	},
+		 	run: function(){
+		 		person.distance_travelled += 10;
+		 		alert(person.name + " is running " + person.distance_travelled);
+		 	},
+		 	crawl: function(){
+		 		person.distance_travelled += 1;
+		 		alert(person.name + " is crawling " + person.distance_travelled);
+
+		 	},
+		 	do_something: function(){
+				var random = [this.walk, this.run, this.crawl];
+				return random[Math.floor(Math.random()*3)]();		 		
+		 	},
+		 	fly: function(x, y){
+				var num = Math.floor(Math.random()*10);
+				if (num <= 2) {
+					return x();
+				} else {
+					return y();
+				};
+		 	}
+		};
+
+
+		var x = function() {
+			alert('Flying... Weeeee!!!!');
+		}
+
+		var y = function() {
+			alert(':(');
+		}
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
